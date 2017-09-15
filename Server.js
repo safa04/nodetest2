@@ -14,7 +14,6 @@ app.use(express.static(__dirname + '/client'));
 
 app.use(bodyParser.json());  
 
-app.set('port', process.env.PORT || 8080);
 
 /*Allow CORS*/
 app.use(function(req, res, next) {
