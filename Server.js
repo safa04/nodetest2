@@ -54,15 +54,3 @@ app.get('/Main*' ,   function(req,res,next) {
     res.sendfile('views/Main.html');
 } );
  
-
-app.listen(app.get('port'), function () {
-    console.log('Express server listening on port ' + app.get('port'));
-});
-
-	var options = {
-      key: fs.readFileSync('./key.pem', 'utf8'),
-      cert: fs.readFileSync('./server.crt', 'utf8')
-   };
-   
-	https.createServer(options, app).listen(8081);
-	console.log("Server listening for HTTPS connections on port ", 8081);
